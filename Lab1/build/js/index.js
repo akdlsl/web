@@ -2,12 +2,6 @@ webpackJsonp([0],[
 /* 0 */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
 /*
  * Класс, позволяющий создавать стрелку на карте.
  * Является хелпером к созданию полилинии, у которой задан специальный оверлей.
@@ -287,15 +281,21 @@ ymaps.modules.define("overlay.Arrow", [
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__yandexApi_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__yandexApi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__yandexApi_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Arrow_js__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Arrow_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Arrow_js__);
 
 
 
@@ -303,8 +303,6 @@ ymaps.ready(async function () {
     let myMap = new ymaps.Map('map', {
         center: [55.733835, 37.588227],
         zoom: 5
-    }, {
-        searchControlProvider: 'yandex#search'
     });
 
     let ArrowObject;
@@ -312,7 +310,7 @@ ymaps.ready(async function () {
         ArrowObject = Arrow;
     });
 
-    const placesAddress = ['Новгород', 'Чернигов', 'Смоленск'];
+    const placesAddress = ['Стокгольм', 'Таллин', 'Выборг', 'Санкт-Петербург', 'Новгород', 'Смоленск', 'Киев', 'Одесса', 'Варна', 'Стамбул', 'Афины'];
     const placeCoordinates = [];
     for (const a of placesAddress) {
         const geocoder = await ymaps.geocode(a);

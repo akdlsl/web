@@ -1,4 +1,3 @@
-import './index.css';
 import './Arrow.js'
 
 ymaps.ready(async function () {
